@@ -12,10 +12,10 @@ const Language = () => {
             <div className="fixed-lang">
                 <div className="buttons">
                     <div className="uz">
-                        <button onClick={(e) => changeLanguage("uz")}>Ozbeca</button>
+                        <button onClick={(e) => changeLanguage("uz")}>O'zbek tili</button>
                     </div>
                     <div className="ru">
-                        <button onClick={(e) => changeLanguage("ru")}>Orisca</button>
+                        <button onClick={(e) => changeLanguage("ru")}>Русский язык</button>
                     </div>
                 </div>
             </div>

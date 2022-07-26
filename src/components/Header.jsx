@@ -1,17 +1,22 @@
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { getText } from '../locales'
 
 const Header = () => {
     return (
         <>
-            <div className='Header'>
+            <div className='Header' id='home'>
                 <div className="container">
                     <div className="row justify-content-between">
                         <div className="col-md-5 z-index">
                             <div className="info">
                                 <h1>{getText("headerT")}</h1>
+                                <div className="adds">
+                                    <p>{getText("navbartop")}</p>
+                                </div>
                                 <div className="mybtn">
-                                    <a href="/">{getText("request")}</a>
+                                    <a href="#zayavka">{getText("request")}</a>
                                 </div>
                             </div>
                         </div>

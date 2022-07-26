@@ -14,7 +14,7 @@ const Zayavka = () => {
     const sendMessage = (e) => {
         e.preventDefault()
         setLoad(true)
-        axios.post("https://muhammadumar.uz/bot/api/", { name, phone_number })
+        axios.post("https://jamshidtozalik.uz/bot/api/", { name, phone_number })
             .then((res) => {
                 // toast.success('Success');
                 setName("")
@@ -45,7 +45,7 @@ const Zayavka = () => {
         theme: "dark"
     });
     return (
-        <div className='Zayavka'>
+        <div className='Zayavka' id='zayavka'>
             <div className="container">
                 <div className="main-title text-center">
                     <h2>{getText("request")}</h2>

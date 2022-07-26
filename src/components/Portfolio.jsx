@@ -3,7 +3,7 @@ import { getText } from '../locales'
 
 const Portfolio = () => {
     return (
-        <div className='Portfolio'>
+        <div className='Portfolio' id='portfolio'>
             <div className="main-title text-center">
                 <h2>{getText("portfolio")}</h2>
             </div>

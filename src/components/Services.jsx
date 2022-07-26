@@ -3,7 +3,7 @@ import { getText } from '../locales'
 
 const Services = () => {
     return (
-        <div className='Services'>
+        <div className='Services' id='services'>
                 <div className="main-title text-center">
                     <h2>{getText("typeofservices")}</h2>
                 </div>

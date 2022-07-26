@@ -5,7 +5,7 @@ import { getText } from '../locales'
 
 const Footer = () => {
     return (
-        <div className='Footer'>
+        <div className='Footer' id='contacts'>
             <div className="container">
                 <div className="main-title text-center">
                     <h2>{getText("contacts")}</h2>
@@ -21,10 +21,10 @@ const Footer = () => {
                                 <h5>{getText("address")}</h5>
                                 <a href="https://goo.gl/maps/XoELTYnmmpyxN1ALA">{getText("adress")}</a>
                             </div>
-                            <div className="blok">
+                            {/* <div className="blok">
                                 <h5>{getText("pochta")}</h5>
                                 <a href="malto:example">mail@mail.com</a>
-                            </div>
+                            </div> */}
                             <div className="socials">
                                 <a href=""><FontAwesomeIcon icon={faTelegramPlane}/></a>
                                 <a href=""><FontAwesomeIcon icon={faInstagram}/></a>

@@ -62,47 +62,70 @@ body {
         }
     }
 
-.fixed-lang{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: 9999;
-    background: $colorBlue;
-    .buttons{
+    .fixed-lang {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 9999;
+        background: $colorBlue;
 
-        .uz, .ru {
-            button {
-                outline: none;
-                box-shadow: none;
-                border: none;
-                font-size: 44px;
-                padding: 25px 125px;
-                background: $colorYellow;
-                color: $colorBlue;
-                border-radius: 70px;
+        .buttons {
+            display: flex;
+            justify-content: space-between;
 
-                @media (max-width:776px) {
-                    font-size: 20px;
-                    padding: 10px 20px;
+            .uz,
+            .ru {
+                button {
+                    outline: none;
+                    box-shadow: none;
+                    border: none;
+                    font-size: 44px;
+                    padding: 25px 125px;
+                    background: $colorYellow;
+                    color: $colorBlue;
+                    border-radius: 70px;
+
+                    @media (max-width:776px) {
+                        font-size: 20px;
+                        padding: 10px 20px;
+                    }
                 }
+
+                margin-right: 20px;
             }
-            margin-right: 20px;
+        }
+
+        &.none {
+            display: none;
+            z-index: -9999;
         }
     }
 
-    &.none{
-        display: none;
-        z-index: -9999;
-    }
-}
+    .NavbarTop {
+        background: $colorBlue;
+        padding: 10px 0;
 
+        p,
+        a {
+            font-size: 25px;
+            color: #fff;
+
+            @media (max-width:992px) {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width:767px) {
+            .tel {
+                text-align: end;
+            }
+        }
+    }
 
     .navbarLine {
         padding: 76px 0 0;
@@ -110,11 +133,12 @@ body {
 
     .navBar {
         padding: 20px 0;
-        position: fixed;
-        top: 0;
-        right: 0;
+        // top: 0;
+        // right: 0;
         z-index: 999;
-        left: 0;
+        // left: 0;
+        position: sticky;
+        top: 0;
 
         &.active {
             background: #dedede71;
@@ -122,6 +146,10 @@ body {
             backdrop-filter: blur(50px);
             border-radius: 0;
             margin: 0;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 999;
 
             .burger {
 
@@ -274,7 +302,7 @@ body {
                 line-height: 75px;
                 color: #fff;
                 font-weight: 700;
-                margin-bottom: 50px;
+                margin-bottom: 20px;
 
                 @media (max-width:992px) {
                     font-size: 40px;
@@ -305,6 +333,22 @@ body {
                     @media (max-width:776px) {
                         font-size: 20px;
                         padding: 10px 20px;
+                    }
+                }
+            }
+
+            .adds {
+                margin-bottom: 50px;
+
+                p {
+                    font-size: 30px;
+                    color: $colorYellow;
+                    background: #fff;
+                    padding: 0 5px;
+                    border-radius: 5px;
+
+                    @media (max-width:992px) {
+                        font-size: 22px;
                     }
                 }
             }
@@ -416,6 +460,39 @@ body {
                     border-right: none;
                     border-bottom: 1px solid #fff;
 
+                }
+            }
+        }
+    }
+
+    .Etapy {
+        margin-top: 100px;
+
+        .card {
+            box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.11);
+            height: 100%;
+            padding: 0 20px 20px;
+            transition: all ease-in-out 0.5s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            h5 {
+                font-size: 22px;
+                color: $colorBlue;
+                margin-bottom: 15px;
+
+                @media (max-width:767px) {
+                    font-size: 20px;
+                }
+            }
+
+            p {
+                font-size: 20px;
+
+                @media (max-width:767px) {
+                    font-size: 16px;
                 }
             }
         }

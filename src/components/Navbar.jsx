@@ -23,16 +23,16 @@ const Navbar = () => {
                 <div className="row align-items-center justify-content-between">
                     <div className="col-lg-2 col-4">
                         <div className="logo">
-                            <a href="/">Logo</a>
+                            <a href="/"><img className='w-100' src="img/logo.png" alt="" /></a>
                         </div>
                     </div>
                     <div className={`col-8 mobileWrap ${burger ? '' : 'burgered'}`}>
                         <ul className="nav-menu">
-                            <li><a onClick={() => setBurger(!burger)} href="/">{getText("home")}</a></li>
-                            <li><a onClick={() => setBurger(!burger)} href="/">{getText("services")}</a></li>
-                            <li><a onClick={() => setBurger(!burger)} href="/">{getText("portfolio")}</a></li>
-                            <li><a onClick={() => setBurger(!burger)} href="/">{getText("request")}</a></li>
-                            <li><a onClick={() => setBurger(!burger)} href="/">{getText("contacts")}</a></li>
+                            <li><a onClick={() => setBurger(!burger)} href="#home">{getText("home")}</a></li>
+                            <li><a onClick={() => setBurger(!burger)} href="#services">{getText("services")}</a></li>
+                            <li><a onClick={() => setBurger(!burger)} href="#portfolio">{getText("portfolio")}</a></li>
+                            <li><a onClick={() => setBurger(!burger)} href="#zayavka">{getText("request")}</a></li>
+                            <li><a onClick={() => setBurger(!burger)} href="#contacts">{getText("contacts")}</a></li>
                         </ul>
                     </div>
                     <div onClick={() => setBurger(!burger)} className={`burger pr-4 ml-auto d-flex d-lg-none ${burger ? 'burgered' : ''}`}>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-        <div className="navbarLine"></div>
+        {/* <div className="navbarLine"></div> */}
 </>
     )
 }
