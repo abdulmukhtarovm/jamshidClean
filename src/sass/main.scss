@@ -465,6 +465,101 @@ body {
         }
     }
 
+    .phoneWrap {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: fixed;
+            width: 70px;
+            height: 70px;
+            background-color: rgba(0, 0, 0, 0.5);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            bottom: 70px;
+            right: 117px;
+            border-radius: 50%;
+            animation: anim1 3s linear infinite reverse;
+
+            @media(max-width: 676px) {
+                right: 25px;
+                bottom: 20px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        a {
+            width: 70px;
+            height: 70px;
+            background: $colorBlue;
+            -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 70px;
+            right: 117px;
+            z-index: 999;
+            animation: anim2 2s ease-in-out infinite;
+
+            svg {
+                transform: rotate(270deg) scale(1.5);
+                color: $colorYellow;
+                @media(max-width: 767px) {
+                    transform: rotate(270deg) scale(1.2);
+                }
+            }
+
+            @media(max-width: 676px) {
+                right: 25px;
+                bottom: 20px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    @keyframes anim1 {
+        0% {
+            transform: scale(2.2);
+            opacity: 0.2;
+        }
+
+        // 50% {
+        //   transform: scale(2.2);
+        //   opacity: 0.1;
+        // }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes anim2 {
+        0% {
+            transform: rotate(0);
+        }
+
+        25% {
+            transform: rotate(-15deg);
+        }
+
+        50% {
+            transform: rotate(15deg);
+        }
+
+        75% {
+            transform: rotate(-15deg);
+        }
+
+        100% {
+            transform: rotate(0);
+        }
+    }
+
     .Etapy {
         margin-top: 100px;
 

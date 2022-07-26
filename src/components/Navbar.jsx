@@ -1,3 +1,5 @@
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 
 import { getText } from '../locales'
@@ -44,6 +46,8 @@ const Navbar = () => {
             </div>
         </div>
         {/* <div className="navbarLine"></div> */}
+
+        <div class="phoneWrap"><div class="phone"><a href="tel: +998997203636"><FontAwesomeIcon icon={faPhone}/></a></div></div>
 </>
     )
 }
